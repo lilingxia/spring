@@ -12,6 +12,6 @@
 	用户信息<br>
 	该用户用户名：${user.username }<br>
 	该用户密码：${user.password }<br>
-	<font color="red">你好，${user.username }<br>，你是第<%= count %>次访问该页面！！！</font><br>
+	<font color="red">你好，${user.username }<br>，你是第<%= count %>个访问该页面者！！！</font><br>
 </body>
 </html>

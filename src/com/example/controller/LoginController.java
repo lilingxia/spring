@@ -52,16 +52,26 @@ public class LoginController extends AbstractController {
 	
 	public User getUser(String username,String password)
 	{
-		if(username.equals("lilingxia") && password.equals("lilingxia"))
+		if(username.equals("lilingxia") && password.equals("111111"))
 		{
 			return new User(username,password);
 		}
 		else
-			if(username.equals("lilingxia1") && password.equals("lilingxia1"))
+			if(username.equals("liuchong") && password.equals("222222"))
 			{
 				return new User(username,password);
 			}
 			else 
+				if(username.equals("guoli") && password.equals("333333"))
+				{
+					return new User(username,password);
+				}
+				else 
+					if(username.equals("lijunjun") && password.equals("444444"))
+					{
+						return new User(username,password);
+					}
+					else 
 		{
 			return null;
 		}

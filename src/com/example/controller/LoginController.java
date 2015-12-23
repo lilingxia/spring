@@ -1,8 +1,9 @@
 package com.example.controller;
-
+import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -10,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
 
 import com.example.entity.User;
+
 
 public class LoginController extends AbstractController {
 	//
@@ -37,39 +39,40 @@ public class LoginController extends AbstractController {
 			HttpServletResponse response) throws Exception {
 		
 		String username = request.getParameter("username");
-		String password = request.getParameter("password");
-		User user = getUser(username, password);
+		//String password = request.getParameter("password");
+		String time= request.getParameter("time");
+		User user = getUser(username, time);
 		
 		Map<String ,Object> model=new HashMap<String,Object>();
 		if(user !=null){
 			model.put("user", user);
 			return new ModelAndView(getSuccessView(),model);
 		}else{
-			model.put("error", "用户名或者密码错误,请重新输入");
+			model.put("error", "该用户不存在,请重新输入");
 			return new ModelAndView(getFailView(),model);
 		}		
 	}
 	
-	public User getUser(String username,String password)
+	public User getUser(String username,String time)
 	{
-		if(username.equals("lilingxia") && password.equals("111111"))
+		if(username.equals("lilingxia"))//&& password.equals("111111"))
 		{
-			return new User(username,password);
+			return new User(username,time);
 		}
 		else
-			if(username.equals("liuchong") && password.equals("222222"))
+			if(username.equals("liuchong"))//&& password.equals("222222"))
 			{
-				return new User(username,password);
+				return new User(username,time);
 			}
 			else 
-				if(username.equals("guoli") && password.equals("333333"))
+				if(username.equals("guoli"))// && password.equals("333333"))
 				{
-					return new User(username,password);
+					return new User(username,time);
 				}
 				else 
-					if(username.equals("lijunjun") && password.equals("444444"))
+					if(username.equals("lijunjun"))// && password.equals("444444"))
 					{
-						return new User(username,password);
+						return new User(username,time);
 					}
 					else 
 		{

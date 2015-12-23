@@ -8,9 +8,9 @@
 <title>点击进入界面</title>  
 </head>  
 <body>  
-<h2>朋友，你好，请点击进入!</h2>  
+<h2>你好，请点击进入!</h2>  
   
-	<a href="login.jsp">Click</a>
+	<a href="login.jsp">点击进入</a>
 
 </body>
 </html>
